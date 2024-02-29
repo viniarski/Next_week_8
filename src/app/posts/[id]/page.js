@@ -8,9 +8,6 @@ export async function generateMetadata() {
 }
 
 export default async function page({ params, searchParams }) {
-  // console.log('searchParams', searchParams)
-  // console.log('params', params)
-
   const response = await fetch('https://jsonplaceholder.typicode.com/posts');
   const posts = await response.json();
 
@@ -20,7 +17,6 @@ export default async function page({ params, searchParams }) {
 
   return (
     <div>
-      {/* <h1>Post Number: {params.id}</h1> */}
       <div className="flex gap-3">
         <Link href={`/posts/${params.id}?sort=asc`}>Sort ascending</Link> -{' '}
         <Link href={`/posts/${params}?sort=desc`}>Sort descending</Link>
