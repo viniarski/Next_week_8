@@ -21,8 +21,6 @@ export default async function page({ params, searchParams }) {
   return (
     <div>
       {/* <h1>Post Number: {params.id}</h1> */}
-      <Link href={`/`}>Home</Link>
-      <br />
       <div className="flex gap-3">
         <Link href={`/posts/${params.id}?sort=asc`}>Sort ascending</Link> -{' '}
         <Link href={`/posts/${params}?sort=desc`}>Sort descending</Link>
